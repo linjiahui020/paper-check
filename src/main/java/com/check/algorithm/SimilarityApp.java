@@ -58,13 +58,13 @@ public class SimilarityApp {
         }
         //执行余弦相似度算法
         double num = CosSimilarity.getSimilarity(orgList,desList);
-        System.out.println("查重率为: "+num);
+        System.out.println("查重率为: "+String.format("%.2f",num));
 //        if(file.exists()){
 //            System.out.println("输出文件已存在，请更改目录或者输出文件名字");
 //            return;
 //        }
         //通过io写入
-        IOUtils.write(args[2],"查重率为:"+num);
+        IOUtils.write(args[2],"查重率为:"+String.format("%.2f",num));
         long end = System.currentTimeMillis();
         System.out.println("消耗时间:"+(end - start)+"ms");
 //        try {
